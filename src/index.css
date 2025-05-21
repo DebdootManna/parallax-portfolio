@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-text-light dark:text-text-dark bg-background-light dark:bg-background-dark transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+  }
+}
+
+@layer components {
+  .parallax-section {
+    @apply relative overflow-hidden min-h-screen w-full;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight;
+  }
+  
+  .section-subtitle {
+    @apply text-lg md:text-xl lg:text-2xl mb-6 opacity-80;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 relative text-text-light dark:text-text-dark text-opacity-70 dark:text-opacity-70 hover:text-opacity-100 dark:hover:text-opacity-100 transition-all;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-primary rounded transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .social-icon {
+    @apply p-3 rounded-full text-text-light dark:text-text-dark bg-surface-light dark:bg-surface-dark hover:bg-primary hover:dark:bg-primary transition-all duration-300 hover:text-white hover:dark:text-white;
+  }
+  
+  .project-card {
+    @apply relative overflow-hidden rounded-lg bg-surface-light dark:bg-surface-dark p-6 shadow-md transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .footer-link {
+    @apply underline text-primary hover:text-primary-dark transition-colors;
+  }
+  
+  .theme-toggle {
+    @apply p-2 rounded-full bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors;
+  }
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Minimal scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(155, 155, 155, 0.5);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(155, 155, 155, 0.8);
+  }
+}
