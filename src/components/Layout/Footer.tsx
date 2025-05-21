@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Previous Work</h3>
+            <h3 className="text-lg font-semibold mb-4">Other Sources</h3>
             <ul className="space-y-2">
               <li>
                 <a 
@@ -22,12 +22,12 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.debdootmanna.me/" 
+                  href="https://www.linkedin.com/in/debdootmanna/"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="footer-link flex items-center"
                 >
-                  For more details... <ExternalLink className="w-4 h-4 ml-1" />
+                  LinkedIn <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </li>
             </ul>

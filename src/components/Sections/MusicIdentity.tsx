@@ -104,20 +104,20 @@ const MusicIdentity: React.FC = () => {
 
                   <div className="mt-4 flex space-x-4">
                     <a
-                        href="https://soundcloud.com"
+                        href="https://open.spotify.com/album/26QlxsORL2Yh7zPt8Xh6gj?si=jChM1bieTEmSGt427h4RRw&nd=1&dlsi=cc3a6ea885c14c9f"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
                     >
-                      <span className="mr-1">SoundCloud</span>
+                      <span className="mr-1">Spotify</span>
                     </a>
                     <a
-                        href="https://youtube.com"
+                        href="https://music.apple.com/us/album/solitary-star/1797310730"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
                     >
-                      <span className="mr-1">YouTube</span>
+                      <span className="mr-1">Apple Music</span>
                     </a>
                   </div>
                 </div>

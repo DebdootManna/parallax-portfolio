@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
       icon: <Brain className="w-6 h-6" />,
       tags: ["Privacy", "Federated Learning", "Cryptography"],
       color: "primary",
-      link: "https://github.com/yourusername/privacy-ml",
+      link: "https://debdootmanna.github.io/Privacy-Preserving-Collaborative-ML-Research/",
     },
   ];
 
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
             </p>
 
             <a
-                href="https://www.debdootmanna.me/"
+                href="https://debdootmanna.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-primary hover:bg-primary-dark text-white py-2 px-6 rounded-md transition-colors duration-300"
