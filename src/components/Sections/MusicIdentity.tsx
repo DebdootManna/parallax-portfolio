@@ -119,6 +119,14 @@ const MusicIdentity: React.FC = () => {
                     >
                       <span className="mr-1">Apple Music</span>
                     </a>
+                    <a
+                        href="https://music.youtube.com/playlist?list=OLAK5uy_kxCrYIWW-TWI7nWocG4eFqcJZtgr-UxS4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
+                    >
+                      <span className="mr-1">YouTube Music</span>
+                    </a>
                   </div>
                 </div>
 
@@ -177,7 +185,7 @@ const MusicIdentity: React.FC = () => {
                   onEnded={() => setIsPlaying(false)}
               >
                 {/* Replace with your actual audio file */}
-                <source src="/public/gravity.mp3" type="audio/mpeg" />
+                <source src="/gravity.mp3" type="audio/mpeg" />
               </audio>
 
               <div className="flex items-center justify-between">
