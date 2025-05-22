@@ -19,7 +19,9 @@ const MusicIdentity: React.FC = () => {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        audioRef.current.play().catch(error => {
+          console.error("Error playing audio:", error);
+        });
       }
       setIsPlaying(!isPlaying);
     }
@@ -28,6 +30,13 @@ const MusicIdentity: React.FC = () => {
   const handleTimeUpdate = () => {
     if (audioRef.current) {
       setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
     }
   };
 
@@ -104,28 +113,20 @@ const MusicIdentity: React.FC = () => {
 
                   <div className="mt-4 flex space-x-4">
                     <a
-                        href="https://open.spotify.com/album/26QlxsORL2Yh7zPt8Xh6gj?si=jChM1bieTEmSGt427h4RRw&nd=1&dlsi=cc3a6ea885c14c9f"
+                        href="https://soundcloud.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
                     >
-                      <span className="mr-1">Spotify</span>
+                      <span className="mr-1">SoundCloud</span>
                     </a>
                     <a
-                        href="https://music.apple.com/us/album/solitary-star/1797310730"
+                        href="https://youtube.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
                     >
-                      <span className="mr-1">Apple Music</span>
-                    </a>
-                    <a
-                        href="https://music.youtube.com/playlist?list=OLAK5uy_kxCrYIWW-TWI7nWocG4eFqcJZtgr-UxS4"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
-                    >
-                      <span className="mr-1">YouTube Music</span>
+                      <span className="mr-1">YouTube</span>
                     </a>
                   </div>
                 </div>
@@ -197,7 +198,7 @@ const MusicIdentity: React.FC = () => {
                     {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
                   </button>
                   <div className="ml-4">
-                    <h4 className="font-semibold">Gravity</h4>
+                    <h4 className="font-semibold">Galactic Patterns</h4>
                     <p className="text-sm opacity-70">The Messengers</p>
                   </div>
                 </div>
