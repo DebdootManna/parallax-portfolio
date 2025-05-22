@@ -9,6 +9,7 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const socialMenuRef = useRef<HTMLDivElement>(null);
   const socialButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,15 +27,19 @@ const Header: React.FC = () => {
       const target = event.target as HTMLElement;
 
       // Handle mobile menu
-      if (!target.closest('.mobile-menu') && !target.closest('.mobile-menu-button')) {
+      if (
+          isOpen &&
+          !mobileMenuRef.current?.contains(target) &&
+          !target.closest('.mobile-menu-button')
+      ) {
         setIsOpen(false);
       }
 
       // Handle social menu
       if (
           isSocialOpen &&
-          !socialMenuRef.current?.contains(target as Node) &&
-          !socialButtonRef.current?.contains(target as Node)
+          !socialMenuRef.current?.contains(target) &&
+          !socialButtonRef.current?.contains(target)
       ) {
         setIsSocialOpen(false);
       }
@@ -42,7 +47,7 @@ const Header: React.FC = () => {
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isSocialOpen]);
+  }, [isOpen, isSocialOpen]);
 
   // Close menus on escape key
   useEffect(() => {
@@ -57,6 +62,21 @@ const Header: React.FC = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsOpen(false);
+        setIsSocialOpen(false);
+        // Update URL without scrolling
+        window.history.pushState(null, '', href);
+      }
+    }
+  };
+
   return (
       <header
           className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -70,21 +90,18 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
-            <a href="#focus" className="nav-link">Focus</a>
-            <a href="#research" className="nav-link">Research</a>
-            <a href="#music" className="nav-link">Music</a>
-            <a href="#interests" className="nav-link">Interests</a>
-            <a href="#darkweb" className="nav-link">Dark Web</a>
-            <a href="#projects" className="nav-link">Projects</a>
+            <a href="#focus" className="nav-link" onClick={handleNavClick}>Focus</a>
+            <a href="#research" className="nav-link" onClick={handleNavClick}>Research</a>
+            <a href="#music" className="nav-link" onClick={handleNavClick}>Music</a>
+            <a href="#interests" className="nav-link" onClick={handleNavClick}>Interests</a>
+            <a href="#darkweb" className="nav-link" onClick={handleNavClick}>Dark Web</a>
+            <a href="#projects" className="nav-link" onClick={handleNavClick}>Projects</a>
 
             <div className="ml-4 flex items-center space-x-3 relative">
               {/* Social Menu Button */}
               <button
                   ref={socialButtonRef}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsSocialOpen(!isSocialOpen);
-                  }}
+                  onClick={() => setIsSocialOpen(!isSocialOpen)}
                   className="social-menu-button p-2 rounded-full bg-surface-light dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
                   aria-label="Toggle social menu"
                   aria-expanded={isSocialOpen}
@@ -177,6 +194,7 @@ const Header: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
               <motion.div
+                  ref={mobileMenuRef}
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
@@ -185,12 +203,12 @@ const Header: React.FC = () => {
               >
                 <div className="container mx-auto px-4 py-4">
                   <nav className="flex flex-col space-y-3">
-                    <a href="#focus" className="nav-link" onClick={() => setIsOpen(false)}>Focus</a>
-                    <a href="#research" className="nav-link" onClick={() => setIsOpen(false)}>Research</a>
-                    <a href="#music" className="nav-link" onClick={() => setIsOpen(false)}>Music</a>
-                    <a href="#interests" className="nav-link" onClick={() => setIsOpen(false)}>Interests</a>
-                    <a href="#darkweb" className="nav-link" onClick={() => setIsOpen(false)}>Dark Web</a>
-                    <a href="#projects" className="nav-link" onClick={() => setIsOpen(false)}>Projects</a>
+                    <a href="#focus" className="nav-link" onClick={handleNavClick}>Focus</a>
+                    <a href="#research" className="nav-link" onClick={handleNavClick}>Research</a>
+                    <a href="#music" className="nav-link" onClick={handleNavClick}>Music</a>
+                    <a href="#interests" className="nav-link" onClick={handleNavClick}>Interests</a>
+                    <a href="#darkweb" className="nav-link" onClick={handleNavClick}>Dark Web</a>
+                    <a href="#projects" className="nav-link" onClick={handleNavClick}>Projects</a>
 
                     <div className="flex items-center space-x-3 pt-2">
                       <a href="https://github.com/DebdootManna" target="_blank" rel="noopener noreferrer" className="social-icon">
