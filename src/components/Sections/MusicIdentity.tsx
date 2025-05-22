@@ -182,10 +182,10 @@ const MusicIdentity: React.FC = () => {
               <audio
                   ref={audioRef}
                   onTimeUpdate={handleTimeUpdate}
-                  onEnded={() => setIsPlaying(false)}
+                  onEnded={handleEnded}
               >
-                {/* Replace with your actual audio file */}
-                <source src="/public/gravity.mp3" type="audio/mpeg" />
+                <source src="/gravity.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
               </audio>
 
               <div className="flex items-center justify-between">
