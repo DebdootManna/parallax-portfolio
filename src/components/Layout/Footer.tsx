@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="#" 
+                  href="https://github.com/DebdootManna/parallax-portfolio/blob/master/public/Debdoot-Manna-Resume-2025.pdf" 
                   className="footer-link flex items-center"
                 >
                   Download Resume <ArrowDown className="w-4 h-4 ml-1" />
