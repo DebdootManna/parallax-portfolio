@@ -185,7 +185,7 @@ const MusicIdentity: React.FC = () => {
                   onEnded={() => setIsPlaying(false)}
               >
                 {/* Replace with your actual audio file */}
-                <source src="/gravity.mp3" type="audio/mpeg" />
+                <source src="/public/gravity.mp3" type="audio/mpeg" />
               </audio>
 
               <div className="flex items-center justify-between">
