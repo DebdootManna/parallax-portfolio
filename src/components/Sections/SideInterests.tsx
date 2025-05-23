@@ -28,8 +28,8 @@ const SideInterests: React.FC = () => {
     },
     {
       icon: <Tool className="w-8 h-8" />,
-      title: 'Experimental Tools',
-      description: 'Building custom software and hardware interfaces for unique creative expression.',
+      title: 'Music',
+      description: 'Composing electronic sounds and hallucinations in the form of audio.',
     },
   ];
 
@@ -122,19 +122,27 @@ const SideInterests: React.FC = () => {
                         {i === 0 && "Distance..."}
                         {i === 1 && "Reels..."}
                         {i === 2 && "Abstractness..."}
-                        {i === 3 && "Retro..."}
+                        {i === 3 && "Compose..."}
                       </div>
                     </div>
 
                   </div>
 
                   {/* Replace this with image placeholder */}
-                  <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
-                    {i === 0 && <Camera className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
-                    {i === 1 && <Film className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
-                    {i === 2 && <Palette className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
-                    {i === 3 && <Music className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
-                  </div>
+                  {/*<div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">*/}
+                  {/*  {i === 0 && <Camera className="w-8 h-8 text-gray-400 dark:text-gray-600" />}*/}
+                  {/*  {i === 1 && <Film className="w-8 h-8 text-gray-400 dark:text-gray-600" />}*/}
+                  {/*  {i === 2 && <Palette className="w-8 h-8 text-gray-400 dark:text-gray-600" />}*/}
+                  {/*  {i === 3 && <Music className="w-8 h-8 text-gray-400 dark:text-gray-600" />}*/}
+                  {/*</div>*/}
+
+                  {/* Actual images */}
+                  <img
+                      src={`/public/image1${i + 1}.jpg`}
+                      alt={`Interest visual ${i + 1}`}
+                      className="w-full h-full object-cover"
+                  />
+
                 </motion.div>
               ))}
             </div>
