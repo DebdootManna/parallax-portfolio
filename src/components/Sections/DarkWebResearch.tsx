@@ -18,18 +18,29 @@ const DarkWebResearch: React.FC = () => {
         <ParallaxLayer
           className="absolute inset-0 bg-gradient-to-b from-background-light to-primary/5 dark:from-background-dark dark:to-primary/10"
           speed={0.2}
-        />
-        
-        {/* Dark web themed visual elements */}
+        >
+          {null}
+        </ParallaxLayer>
         <ParallaxLayer
           className="absolute top-1/4 right-1/4 w-80 h-80 rounded-full bg-primary/5 blur-3xl opacity-50 dark:opacity-70"
           speed={0.3}
-        />
+        >
+          {null}
+        </ParallaxLayer>
         <ParallaxLayer
           className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-secondary/5 blur-3xl opacity-50 dark:opacity-70"
           speed={0.4}
           direction="down"
-        />
+        >
+          {null}
+        </ParallaxLayer>
+        <ParallaxLayer
+          className="absolute bottom-1/3 left-1/4 w-96 h-96 rounded-full bg-secondary/5 blur-3xl opacity-50 dark:opacity-70"
+          speed={0.4}
+          direction="down"
+        >
+          {null}
+        </ParallaxLayer>
       </div>
       
       {/* Content */}

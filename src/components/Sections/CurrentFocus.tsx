@@ -18,18 +18,24 @@ const CurrentFocus: React.FC = () => {
         <ParallaxLayer 
           className="absolute inset-0 bg-gradient-to-br from-transparent via-secondary/10 to-transparent"
           speed={0.2}
-        />
+        >
+          <div>{/* Background gradient layer */}</div>
+        </ParallaxLayer>
         
         {/* Abstract shapes */}
         <ParallaxLayer 
           className="absolute top-1/3 left-1/5 w-72 h-72 rounded-full bg-primary/5 blur-3xl" 
           speed={0.3}
-        />
+        >
+          <div>{/* Primary blur shape */}</div>
+        </ParallaxLayer>
         <ParallaxLayer 
           className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/10 blur-3xl" 
           speed={0.4} 
           direction="down"
-        />
+        >
+          <div>{/* Accent blur shape */}</div>
+        </ParallaxLayer>
       </div>
       
       {/* Content */}

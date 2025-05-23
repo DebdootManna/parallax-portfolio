@@ -41,18 +41,25 @@ const SideInterests: React.FC = () => {
         <ParallaxLayer
           className="absolute inset-0 bg-gradient-to-bl from-transparent via-secondary/5 to-transparent"
           speed={0.2}
-        />
-
-        {/* Abstract elements */}
-        <ParallaxLayer
-          className="absolute top-1/3 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
-          speed={0.3}
-        />
+        >
+          <div></div>
+        </ParallaxLayer>
+        
         <ParallaxLayer
           className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/5 blur-3xl"
           speed={0.4}
           direction="down"
-        />
+        >
+          <div></div>
+        </ParallaxLayer>
+        
+        <ParallaxLayer
+          className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/5 blur-3xl"
+          speed={0.4}
+          direction="down"
+        >
+          <div></div>
+        </ParallaxLayer>
       </div>
       
       {/* Content */}

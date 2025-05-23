@@ -11,9 +11,15 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent dark:from-transparent dark:via-primary/10 dark:to-transparent"></div>
         
         {/* Replace this with abstract background shapes */}
-        <ParallaxLayer className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-secondary/20 dark:bg-secondary/10 blur-3xl" speed={0.2} />
-        <ParallaxLayer className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-primary/10 dark:bg-primary/5 blur-3xl" speed={0.3} direction="down" />
-        <ParallaxLayer className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-accent/20 dark:bg-accent/10 blur-3xl" speed={0.4} />
+        <ParallaxLayer className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-secondary/20 dark:bg-secondary/10 blur-3xl" speed={0.2}>
+          <div />
+        </ParallaxLayer>
+        <ParallaxLayer className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-primary/10 dark:bg-primary/5 blur-3xl" speed={0.3} direction="down">
+          <div />
+        </ParallaxLayer>
+        <ParallaxLayer className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-accent/20 dark:bg-accent/10 blur-3xl" speed={0.4}>
+          <div />
+        </ParallaxLayer>
       </div>
       
       {/* Content */}

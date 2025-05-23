@@ -30,18 +30,30 @@ const ResearchDomains: React.FC = () => {
         <ParallaxLayer 
           className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-accent/5"
           speed={0.2}
-        />
-
-        {/* Abstract elements */}
+        >
+          {/* Empty child element to satisfy children prop requirement */}
+          <div></div>
+        </ParallaxLayer>
         <ParallaxLayer 
           className="absolute top-1/4 left-20 w-80 h-80 rounded-full bg-secondary/10 blur-3xl"
           speed={0.3}
-        />
+        >
+          <div></div>
+        </ParallaxLayer>
         <ParallaxLayer 
           className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
           speed={0.4}
           direction="down"
-        />
+        >
+          <div></div>
+        </ParallaxLayer>
+        <ParallaxLayer 
+          className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl"
+          speed={0.4}
+          direction="down"
+        >
+          <div></div>
+        </ParallaxLayer>
       </div>
 
       {/* Content */}

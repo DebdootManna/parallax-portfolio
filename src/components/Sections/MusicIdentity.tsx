@@ -72,8 +72,14 @@ const MusicIdentity: React.FC = () => {
             </div>
           </ParallaxLayer>
 
-          <ParallaxLayer className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" speed={0.3} />
-          <ParallaxLayer className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-3xl" speed={0.4} direction="down" />
+          <ParallaxLayer className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" speed={0.3}>
+          <ParallaxLayer className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-3xl" speed={0.4} direction="down">
+            <div></div>
+          </ParallaxLayer>
+          </ParallaxLayer>
+          <ParallaxLayer className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-3xl" speed={0.4} direction="down">
+            <div></div>
+          </ParallaxLayer>
         </div>
 
         <div className="container mx-auto px-4 pt-24 pb-16 min-h-screen flex flex-col justify-center relative z-10">
