@@ -127,7 +127,7 @@ const SideInterests: React.FC = () => {
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="text-white text-lg font-medium px-4 text-center">
                         {i === 0 && "Distance..."}
-                        {i === 1 && "Reels..."}
+                        {i === 1 && "Capture..."}
                         {i === 2 && "Abstractness..."}
                         {i === 3 && "Compose..."}
                       </div>
