@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ParallaxLayer from '../UI/ParallaxLayer';
-import { Camera, Film, Palette, PenTool as Tool } from 'lucide-react';
+import {Camera, Film, Music, Palette, PenTool as Tool} from 'lucide-react';
 
 const SideInterests: React.FC = () => {
   const [ref, inView] = useInView({
@@ -23,8 +23,8 @@ const SideInterests: React.FC = () => {
     },
     {
       icon: <Palette className="w-8 h-8" />,
-      title: 'Digital Art',
-      description: 'Generating algorithmic and AI-assisted artworks that visualize complex concepts.',
+      title: 'Painting',
+      description: 'Composing non-figurative pieces with the style of fauvism.',
     },
     {
       icon: <Tool className="w-8 h-8" />,
@@ -109,15 +109,31 @@ const SideInterests: React.FC = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 group-hover:opacity-80 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="text-white text-lg font-medium">Gallery {i + 1}</div>
+                    {/*<div className="text-white text-lg font-medium">Gallery {i + 1}</div>*/}
+
+                    <img
+                        src={`/public/image${i + 1}.jpg`}
+                        alt={`Interest visual ${i + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300"></div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-white text-lg font-medium px-4 text-center">
+                        {i === 0 && "Distance..."}
+                        {i === 1 && "Reels..."}
+                        {i === 2 && "Abstractness..."}
+                        {i === 3 && "Retro..."}
+                      </div>
+                    </div>
+
                   </div>
-                  
+
                   {/* Replace this with image placeholder */}
                   <div className="w-full h-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                     {i === 0 && <Camera className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
                     {i === 1 && <Film className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
                     {i === 2 && <Palette className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
-                    {i === 3 && <Tool className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
+                    {i === 3 && <Music className="w-8 h-8 text-gray-400 dark:text-gray-600" />}
                   </div>
                 </motion.div>
               ))}

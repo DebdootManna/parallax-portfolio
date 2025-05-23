@@ -86,14 +86,7 @@ const Header: React.FC = () => {
           }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          {/*<a href="#" className="font-bold text-xl md:text-2xl">Debdoot Manna</a>*/}
-          <a href="#" className="font-bold text-xl md:text-2xl flex items-center">
-            <img
-                src="/favicon.ico"
-                alt="Debdoot Manna Logo"
-                className="w-8 h-8 md:w-10 md:h-10 rounded"
-            />
-          </a>
+          <a href="#" className="font-bold text-xl md:text-2xl">Debdoot Manna</a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
