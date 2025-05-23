@@ -152,7 +152,7 @@ const Header: React.FC = () => {
                       <span>Twitter</span>
                     </a>
                     <a 
-                      href="https://youtube.com/@themessengersmusic" 
+                      href="https://www.youtube.com/@themessengersstudios" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="social-menu-link flex items-center space-x-2 p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -227,7 +227,7 @@ const Header: React.FC = () => {
                   <a href="https://twitter.com/DebdootManna" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <Twitter className="w-5 h-5" />
                   </a>
-                  <a href="https://youtube.com/@themessengersmusic" target="_blank" rel="noopener noreferrer" className="social-icon">
+                  <a href="https://www.youtube.com/@themessengersstudios" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <Youtube className="w-5 h-5" />
                   </a>
                   <a href="https://soundcloud.com/themessengersmusic" target="_blank" rel="noopener noreferrer" className="social-icon">
