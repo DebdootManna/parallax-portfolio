@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ParallaxLayer from '../UI/ParallaxLayer';
-import {Camera, Film, Music, Palette, PenTool as Tool} from 'lucide-react';
+import {Camera, Film, Music, Palette} from 'lucide-react';
 
 const SideInterests: React.FC = () => {
   const [ref, inView] = useInView({
@@ -27,7 +27,7 @@ const SideInterests: React.FC = () => {
       description: 'Composing non-figurative pieces with the style of fauvism.',
     },
     {
-      icon: <Tool className="w-8 h-8" />,
+      icon: <Music className="w-8 h-8" />,
       title: 'Music',
       description: 'Composing electronic sounds and hallucinations in the form of audio.',
     },
@@ -38,17 +38,17 @@ const SideInterests: React.FC = () => {
       {/* Background */}
       <div className="absolute inset-0">
         {/* Replace this with parallax background for Side Interests section */}
-        <ParallaxLayer 
+        <ParallaxLayer
           className="absolute inset-0 bg-gradient-to-bl from-transparent via-secondary/5 to-transparent"
           speed={0.2}
         />
-        
+
         {/* Abstract elements */}
-        <ParallaxLayer 
+        <ParallaxLayer
           className="absolute top-1/3 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
           speed={0.3}
         />
-        <ParallaxLayer 
+        <ParallaxLayer
           className="absolute bottom-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/5 blur-3xl"
           speed={0.4}
           direction="down"
