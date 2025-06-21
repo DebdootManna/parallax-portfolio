@@ -33,11 +33,11 @@ const Hero: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
               Debdoot Manna
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl mb-8 opacity-80">
+            <h2 className="font-body text-xl md:text-2xl lg:text-3xl mb-8 opacity-80">
               Researcher of Ideas | Explorer of the Unseen | Sonic Storyteller
             </h2>
             <div className="max-w-2xl">
-              <p className="text-lg md:text-xl leading-relaxed opacity-90 mb-10">
+              <p className="font-body text-lg md:text-xl leading-relaxed opacity-90 mb-10">
                 I explore paradoxes, deep learning, AI security, psychology, and science through raw curiosity. 
                 I don't write code—I unravel patterns. Music and research are my soul, the rest is my playground: 
                 photography, filmography, tech, theories.
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           duration: 2,
         }}
       >
-        <span className="block mb-2 text-sm opacity-70">Scroll Down</span>
+        <span className="font-body block mb-2 text-sm opacity-70">Scroll Down</span>
         <span className="block w-5 h-5 border-b-2 border-r-2 border-text-light dark:border-text-dark transform rotate-45"></span>
       </motion.div>
     </section>

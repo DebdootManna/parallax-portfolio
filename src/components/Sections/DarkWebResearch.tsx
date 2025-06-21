@@ -50,8 +50,13 @@ const DarkWebResearch: React.FC = () => {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-primary">Dark Web Research</h2>
-          <div className="h-1 w-20 bg-primary mb-8"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center">
+            <svg className="w-10 h-10 mr-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Dark Web Research
+          </h2>
+          <div className="h-1 w-20 bg-accent mb-12"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -59,7 +64,7 @@ const DarkWebResearch: React.FC = () => {
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <p className="text-lg md:text-xl opacity-90 leading-relaxed mb-8">
+              <p className="font-body text-lg md:text-xl opacity-90 leading-relaxed mb-8">
                 My research extends into the less visible corners of the internet, where I explore 
                 privacy technologies, information networks, and cryptographic systems. This work 
                 provides valuable insights into digital sovereignty and information security.
@@ -69,7 +74,7 @@ const DarkWebResearch: React.FC = () => {
                 <div className="bg-surface-light/50 dark:bg-surface-dark/50 backdrop-blur p-6 rounded-lg shadow-md border border-primary/20">
                   <Globe className="w-8 h-8 text-primary mb-3" />
                   <h3 className="text-xl font-bold mb-2">Anonymous Networks</h3>
-                  <p className="opacity-80">
+                  <p className="font-body opacity-80">
                     Studying the architecture and behavior of decentralized networks, 
                     focusing on how privacy-preserving systems maintain functionality 
                     while protecting user identity.
@@ -79,7 +84,7 @@ const DarkWebResearch: React.FC = () => {
                 <div className="bg-surface-light/50 dark:bg-surface-dark/50 backdrop-blur p-6 rounded-lg shadow-md border border-primary/20">
                   <Lock className="w-8 h-8 text-secondary mb-3" />
                   <h3 className="text-xl font-bold mb-2">Cryptographic Applications</h3>
-                  <p className="opacity-80">
+                  <p className="font-body opacity-80">
                     Investigating practical implementations of theoretical cryptography,
                     examining how mathematical principles translate into real-world
                     privacy and security solutions.
@@ -89,7 +94,7 @@ const DarkWebResearch: React.FC = () => {
                 <div className="bg-surface-light/50 dark:bg-surface-dark/50 backdrop-blur p-6 rounded-lg shadow-md border border-primary/20">
                   <Shield className="w-8 h-8 text-accent mb-3" />
                   <h3 className="text-xl font-bold mb-2">Private Research</h3>
-                  <p className="opacity-80">
+                  <p className="font-body opacity-80">
                     Much of this work remains confidential due to its nature, but contributes 
                     significantly to my understanding of information systems, network dynamics, 
                     and privacy technologies.
@@ -147,7 +152,7 @@ const DarkWebResearch: React.FC = () => {
             className="mt-16 py-6"
           >
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-            <p className="text-center mt-8 opacity-70 italic">
+            <p className="font-body text-center mt-8 opacity-70 italic">
               "The darkest places in hell are reserved for those who maintain their neutrality in times of moral crisis." — Dante Alighieri
             </p>
           </motion.div>

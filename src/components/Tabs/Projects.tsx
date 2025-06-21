@@ -66,7 +66,13 @@ const Projects: React.FC = () => {
   return (
       <section id="projects" className="py-24 relative overflow-hidden" ref={ref}>
         <div className="container mx-auto px-4">
-          <h2 className="section-title mb-12">Selected Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center">
+            <svg className="w-10 h-10 mr-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            Selected Projects
+          </h2>
+          <div className="h-1 w-20 bg-accent mb-12"></div>
 
           <motion.div
               variants={container}
@@ -81,39 +87,62 @@ const Projects: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     variants={item}
-                    className="project-card group cursor-pointer"
+                    className="project-card group cursor-pointer relative p-8 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
                 >
-                  <div className={`w-12 h-12 rounded-full bg-${project.color}/20 flex items-center justify-center text-${project.color} mb-4`}>
+                  {/* Background gradient on hover */}
+                  <div className={`absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                    project.color === 'primary' ? 'bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5' : 
+                    project.color === 'secondary' ? 'bg-gradient-to-br from-secondary/5 via-primary/5 to-accent/5' : 
+                    'bg-gradient-to-br from-accent/5 via-primary/5 to-secondary/5'
+                  }`}></div>
+                  
+                  {/* Border animation */}
+                  <div className={`absolute inset-0 border-2 border-transparent rounded-xl group-hover:border-primary/20 transition-all duration-500 pointer-events-none`}>
+                    <div className={`absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-500`}></div>
+                  </div>
+                  <div className={`w-12 h-12 rounded-full ${
+                    project.color === 'primary' ? 'bg-primary/20 text-primary' : 
+                    project.color === 'secondary' ? 'bg-secondary/20 text-secondary' : 
+                    'bg-accent/20 text-accent'
+                  } flex items-center justify-center mb-4`}>
                     {project.icon}
                   </div>
 
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs text-${project.color} bg-${project.color}/10 mb-3`}>
-                {project.category}
-              </span>
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs ${
+                    project.color === 'primary' ? 'text-primary bg-primary/10' : 
+                    project.color === 'secondary' ? 'text-secondary bg-secondary/10' : 
+                    'text-accent bg-accent/10'
+                  } mb-3`}>
+                    {project.category}
+                  </span>
 
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-body text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="opacity-80 mb-4">
+                  <p className="font-body text-lg opacity-80 mb-6 leading-relaxed">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.tags.map((tag, i) => (
-                        <span key={i} className="px-2 py-1 bg-gray-200/50 dark:bg-gray-800/50 rounded-md text-xs">
+                        <span key={i} className="font-body px-2 py-1 bg-gray-200/50 dark:bg-gray-800/50 rounded-md text-xs">
                     {tag}
                   </span>
                     ))}
                   </div>
 
-                  <div className="absolute inset-0 -z-10 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-300 from-primary via-secondary to-accent"></div>
+                  <div className={`absolute inset-0 -z-10 opacity-0 group-hover:opacity-10 transition-opacity duration-300 ${
+                    project.color === 'primary' ? 'bg-gradient-to-br from-primary/30 via-secondary/10 to-accent/10' : 
+                    project.color === 'secondary' ? 'bg-gradient-to-br from-secondary/30 via-primary/10 to-accent/10' : 
+                    'bg-gradient-to-br from-accent/30 via-primary/10 to-secondary/10'
+                  }`}></div>
                 </motion.a>
             ))}
           </motion.div>
 
           <div className="text-center mt-16">
-            <p className="text-lg opacity-80 mb-6">
+            <p className="font-body text-lg opacity-80 mb-6">
               These projects represent a small sampling of my work.
               For complete details on current research and ongoing projects:
             </p>

@@ -45,8 +45,13 @@ const CurrentFocus: React.FC = () => {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Current Focus</h2>
-          <div className="h-1 w-20 bg-primary mb-8"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center">
+            <svg className="w-10 h-10 mr-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Current Focus
+          </h2>
+          <div className="h-1 w-20 bg-accent mb-12"></div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
             <motion.div
@@ -57,7 +62,7 @@ const CurrentFocus: React.FC = () => {
             >
               <Shield className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-2xl font-bold mb-3">Security of AI</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Exploring vulnerabilities in machine learning systems and developing 
                 novel defensive strategies against adversarial attacks.
               </p>
@@ -71,7 +76,7 @@ const CurrentFocus: React.FC = () => {
             >
               <Brain className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-2xl font-bold mb-3">Deep Learning</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Researching emerging architectures and techniques in neural networks, 
                 focusing on interpretability and robustness in complex systems.
               </p>
@@ -85,7 +90,7 @@ const CurrentFocus: React.FC = () => {
             >
               <Braces className="w-12 h-12 text-accent mb-4" />
               <h3 className="text-2xl font-bold mb-3">Pattern Recognition</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Investigating theoretical frameworks that bridge computational 
                 models with human cognitive patterns and knowledge representation.
               </p>
@@ -101,7 +106,7 @@ const CurrentFocus: React.FC = () => {
           >
             <div className="relative p-8 bg-surface-light/60 dark:bg-surface-dark/60 backdrop-blur-md rounded-xl shadow-xl border border-primary/20">
               <h3 className="text-3xl font-bold mb-4 text-primary">Security of AI + Deep Learning</h3>
-              <p className="text-lg opacity-90">
+              <p className="font-body text-lg opacity-90">
                 My current research sits at the intersection of security and artificial intelligence, 
                 exploring how complex neural systems can be made resilient against malicious exploitation 
                 while maintaining their learning capabilities.

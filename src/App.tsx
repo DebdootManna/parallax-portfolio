@@ -11,7 +11,7 @@ import Projects from './components/Tabs/Projects';
 import { useTheme } from './contexts/ThemeContext';
 
 const App: React.FC = () => {
-  const { resolvedTheme } = useTheme();
+  useTheme(); // Initialize theme context
   const appRef = useRef<HTMLDivElement>(null);
 
   // Enable smooth scrolling behavior
@@ -40,13 +40,10 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div 
-      ref={appRef}
-      className={`min-h-screen w-full ${resolvedTheme === 'dark' ? 'dark' : ''}`}
-    >
+    <div ref={appRef} className="min-h-screen w-full">
       <Header />
       
-      <main className="relative overflow-hidden">
+      <main className="relative overflow-hidden pt-24">
         <Hero />
         <CurrentFocus />
         <ResearchDomains />

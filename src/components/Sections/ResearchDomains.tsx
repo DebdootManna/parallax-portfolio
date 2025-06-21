@@ -63,10 +63,15 @@ const ResearchDomains: React.FC = () => {
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title">Research Domains</h2>
-          <div className="h-1 w-20 bg-secondary mb-8"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 flex items-center">
+            <svg className="w-10 h-10 mr-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+            Research Domains
+          </h2>
+          <div className="h-1 w-20 bg-accent mb-12"></div>
           
-          <p className="text-lg md:text-xl max-w-3xl opacity-90 mb-16">
+          <p className="font-body text-lg md:text-xl max-w-3xl opacity-90 mb-16">
             My research spans multiple disciplines, seeking unexpected connections between seemingly unrelated fields.
             These are the territories I'm currently exploring:
           </p>
@@ -81,16 +86,16 @@ const ResearchDomains: React.FC = () => {
             >
               <Brain className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-2xl font-bold mb-3">Psychology</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Exploring cognitive patterns, decision-making processes, and the nature of consciousness. 
                 I focus on how mental models shape our perception of reality and influence technological design.
               </p>
               <ul className="mt-4 space-y-2 opacity-80">
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-primary mt-2 mr-2"></span>
                   Cognitive biases in information processing
                 </li>
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-primary mt-2 mr-2"></span>
                   Perception modeling in human-AI interactions
                 </li>
@@ -106,16 +111,16 @@ const ResearchDomains: React.FC = () => {
             >
               <Infinity className="w-10 h-10 text-secondary mb-4" />
               <h3 className="text-2xl font-bold mb-3">Theories & Paradoxes</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Investigating logical inconsistencies and theoretical frameworks that challenge conventional understanding.
                 I'm particularly drawn to paradoxes that reveal limitations in our mental and computational models.
               </p>
               <ul className="mt-4 space-y-2 opacity-80">
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-secondary mt-2 mr-2"></span>
                   Self-reference and recursive systems
                 </li>
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-secondary mt-2 mr-2"></span>
                   Incompleteness in formal systems
                 </li>
@@ -131,16 +136,16 @@ const ResearchDomains: React.FC = () => {
             >
               <Lightbulb className="w-10 h-10 text-accent mb-4" />
               <h3 className="text-2xl font-bold mb-3">Tech & Science</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Exploring emergent technologies and scientific principles, with a focus on 
                 how they reshape our understanding of reality and enable new forms of expression.
               </p>
               <ul className="mt-4 space-y-2 opacity-80">
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-accent mt-2 mr-2"></span>
                   Emergent properties in complex systems
                 </li>
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-accent mt-2 mr-2"></span>
                   Computational frameworks for knowledge representation
                 </li>
@@ -156,16 +161,16 @@ const ResearchDomains: React.FC = () => {
             >
               <Lock className="w-10 h-10 text-primary mb-4" />
               <h3 className="text-2xl font-bold mb-3">Privacy</h3>
-              <p className="opacity-80 leading-relaxed">
+              <p className="font-body opacity-80 leading-relaxed">
                 Researching the intersection of privacy, security, and information theory.
                 I explore how cryptographic principles and information control shape our digital existence.
               </p>
               <ul className="mt-4 space-y-2 opacity-80">
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-primary mt-2 mr-2"></span>
                   Information theory and privacy measures
                 </li>
-                <li className="flex items-start">
+                <li className="font-body flex items-start">
                   <span className="inline-block w-1 h-1 rounded-full bg-primary mt-2 mr-2"></span>
                   Differential privacy in machine learning systems
                 </li>

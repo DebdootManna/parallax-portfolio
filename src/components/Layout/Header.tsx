@@ -91,15 +91,15 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-md py-3 shadow-md'
+          : 'bg-surface-light/50 dark:bg-surface-dark/50 py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <a href="#" className="font-bold text-xl md:text-2xl">Debdoot Manna</a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav className="hidden md:flex items-center space-x-8">
           <a href="#focus" className="nav-link" onClick={handleNavClick}>Focus</a>
           <a href="#research" className="nav-link" onClick={handleNavClick}>Research</a>
           <a href="#music" className="nav-link" onClick={handleNavClick}>Music</a>
@@ -149,7 +149,7 @@ const Header: React.FC = () => {
                       onClick={() => setIsSocialOpen(false)}
                     >
                       <Twitter className="w-5 h-5" />
-                      <span>Twitter</span>
+                      <span className="font-body">Twitter</span>
                     </a>
                     <a 
                       href="https://www.youtube.com/@themessengersstudios" 
@@ -179,7 +179,7 @@ const Header: React.FC = () => {
                       onClick={() => setIsSocialOpen(false)}
                     >
                       <Instagram className="w-5 h-5" />
-                      <span>Instagram</span>
+                      <span className="font-body">Instagram</span>
                     </a>
                   </div>
                 </motion.div>

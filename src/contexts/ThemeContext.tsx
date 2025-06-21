@@ -30,11 +30,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       
       setResolvedTheme(newTheme);
       
-      if (newTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      // Apply the theme class to the root html element
+      const root = window.document.documentElement;
+      root.classList.remove('light', 'dark');
+      root.classList.add(newTheme);
+      root.style.colorScheme = newTheme; // For system UI elements
     };
 
     updateTheme();

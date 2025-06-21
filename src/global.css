@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  code, pre, kbd {
+    @apply font-mono;
+  }
+  
+  /* Add some custom styling for code blocks */
+  pre {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 overflow-x-auto;
+  }
+  
+  /* Add some custom styling for inline code */
+  code {
+    @apply bg-gray-100 dark:bg-gray-800 rounded px-2 py-1 text-sm;
+  }
+}
