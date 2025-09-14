@@ -148,7 +148,7 @@ const Projects: React.FC = () => {
             </p>
 
             <a
-                href="https://debdootmanna.vercel.app/"
+                href="https://debdootmanna-complete.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-primary hover:bg-primary-dark text-white py-2 px-6 rounded-md transition-colors duration-300"
